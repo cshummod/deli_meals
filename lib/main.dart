@@ -1,8 +1,8 @@
-import 'dart:ui' as prefix0;
-
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_guide/category_meals_screen.dart';
-import './categories_screen.dart';
+import 'package:flutter_complete_guide/screens/meal_detail_screen.dart';
+import 'package:flutter_complete_guide/screens/tabs_screen.dart';
+import './screens/category_meals_screen.dart';
+import './screens/categories_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,9 +29,10 @@ class MyApp extends StatelessWidget {
                 fontFamily: "RobotoCondensed",
                 fontWeight: FontWeight.bold,
               ))),
-      home: CategroiesScreen(),
+      home: TabsScreen(),
       routes: {
-        '/category-meals': (ctx) => CategoryMealsScreen(),
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
       },
     );
   }
